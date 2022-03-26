@@ -1,0 +1,38 @@
+.item{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item p{
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+    font-family:  'IBM Plex Sans Arabic', sans-serif;
+}
+
+.item{
+    min-width: 500px;
+    margin-bottom: 30px;
+}
+
+.btn-item:hover{
+    cursor: pointer;
+}
+
+.check:hover{
+    filter: invert(59%) sepia(95%) saturate(3223%) hue-rotate(83deg) brightness(120%) contrast(128%);
+}
+
+.delete:hover{
+    filter: invert(18%) sepia(86%) saturate(7450%) hue-rotate(358deg) brightness(98%) contrast(115%);
+}
+
+.item.completed .check{
+    filter: invert(59%) sepia(95%) saturate(3223%) hue-rotate(83deg) brightness(120%) contrast(128%);
+}
+
+.item.completed p{
+    text-decoration: line-through;
+}

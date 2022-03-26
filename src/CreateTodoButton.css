@@ -1,0 +1,17 @@
+button{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    transition: scale 0.3s;
+}
+
+button:hover{
+    cursor: pointer;
+    scale: 1.4;
+}

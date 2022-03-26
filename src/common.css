@@ -1,0 +1,21 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: black;
+}
+
+#root h2{
+    font-family:  'IBM Plex Sans Arabic', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 8px;
+}
+
+.todo-list{
+    background-color: #61dbfb;
+    padding: 25px;
+    border-radius: 20px;
+}
