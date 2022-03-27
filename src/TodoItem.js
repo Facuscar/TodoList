@@ -1,23 +1,23 @@
 import './TodoItem.css';
 
-function TodoItem(props) {
+function TodoItem({key,text, completed, setTodos}) {
     let state = '';
     if (props.completed === true) {state = 'completed'}
 
-    const changeTodo = (msg) => {
-        console.log(msg + ' ' + props.text)
+    const deleteTodo = () => {
+        
     }
 
     return ( 
         <li className={`item ${state}`}>
-            <span className="btn-item check" onClick = {() => {changeTodo('Has terminado el todo')}}>
+            <span className="btn-item check" onClick = {() => {completeTodo()}}>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M5 12l5 5l10 -10" />
                 </svg>
             </span>
             <p>{props.text}</p>
-            <span className="btn-item delete" onClick = {() => {changeTodo('Has eliminado el todo')}}>
+            <span className="btn-item delete" onClick = {() => {deleteTodo()}}>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />

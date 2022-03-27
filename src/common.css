@@ -15,7 +15,11 @@
 }
 
 .todo-list{
-    background-color: #61dbfb;
+    background-color: #11cfff;
     padding: 25px;
     border-radius: 20px;
+}
+
+ul{
+    padding: 0;
 }

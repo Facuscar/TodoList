@@ -15,6 +15,9 @@
 .item{
     min-width: 500px;
     margin-bottom: 30px;
+    background-color: #61dbfb;
+    
+    padding: 10px;
 }
 
 .btn-item:hover{
