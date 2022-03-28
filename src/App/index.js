@@ -11,13 +11,12 @@ import {useState} from 'react'
 
 function useLocalStorage(itemName, initialValue){ 
 
-  const localStorageItem = localStorage.getItem('TODOS_V1', itemName);
-
+  const localStorageItem = localStorage.getItem(itemName);
   let parsedItem;
 
   if(!localStorageItem){
-     localStorage.setItem('TODOS_V1', JSON.stringify(initialValue));
-     parsedItem = [];
+     localStorage.setItem(itemName, JSON.stringify(initialValue));
+     parsedItem = initialValue;
   } else{
     parsedItem = JSON.parse(localStorageItem);
   }
