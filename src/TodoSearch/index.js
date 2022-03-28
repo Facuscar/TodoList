@@ -6,7 +6,7 @@ function TodoSearch({searchValue, setSearchValue}) {
         
     }
     return (
-    <input onChange = {onSearchValueChange} className="buscador" placeholder='Cebolla' value={searchValue}/>
+    <input onChange = {onSearchValueChange} className="buscador" placeholder='Filtra aqui..' value={searchValue}/>
     );
 }
 
