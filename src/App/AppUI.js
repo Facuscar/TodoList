@@ -3,20 +3,30 @@ import TodoItem from '../TodoItem';
 import TodoList from '../TodoList';
 import CreateTodoButton from '../CreateTodoButton';
 import TodoSearch from '../TodoSearch';
+import { TodoContext } from '../TodoContext';
 
 
-function AppUI(props) {
+function AppUI() {
     return ( 
         <div className="todo-list">
-            <TodoCounter completedTodos = {props.completedTodos} totalTodos = {props.totalTodos}/>
+            <TodoCounter/>
 
-            <TodoSearch searchValue={props.searchValue} setSearchValue={props.setSearchValue} />
+            <TodoSearch/>
 
-            <TodoList>
-            {props.filteredTodos.map(todo => (
-                <TodoItem key={todo.text} text={todo.text} completed={todo.completed} onComplete={() => props.completeTodo(todo.text)} onDelete={() => props.deleteTodo(todo.text)} />
-            ))}
-            </TodoList>
+            <TodoContext.Consumer>
+                { value => {
+                    return(
+                        <TodoList>
+                        {value.error && <p>Desespérate, hubo un error...</p>}
+                        {value.loading && <p>Estamos cargando, no desesperes...</p>}
+
+                        {value.filteredTodos.map(todo => (
+                            <TodoItem key={todo.text} text={todo.text} completed={todo.completed} onComplete={() => value.completeTodo(todo.text)} onDelete={() => value.deleteTodo(todo.text)} />
+                        ))}
+                        </TodoList>
+                    );
+                }}
+            </TodoContext.Consumer>
 
             <CreateTodoButton/>
         </div>
