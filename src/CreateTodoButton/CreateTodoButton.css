@@ -1,17 +1,23 @@
 button{
-    padding: 10px;
-    background-color: transparent;
+    padding: 5px;
+    background-color: black;
     border: none;
     width: 45px;
     height: 45px;
-    border-radius: 10px;
+    border-radius: 50%;
     display: block;
     margin-right: 0;
     margin-left: auto;
-    transition: scale 0.3s;
+    transition: scale 0.3s, transform 0.45s;
+    z-index: 5;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover{
     cursor: pointer;
-    scale: 1.4;
+    scale: 1.25;
+    transform: rotate(180deg);
 }
