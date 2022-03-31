@@ -1,4 +1,4 @@
-button{
+button.openModal{
     padding: 5px;
     background-color: black;
     border: none;
@@ -16,7 +16,7 @@ button{
     align-items: center;
 }
 
-button:hover{
+button:hover.openModal{
     cursor: pointer;
     scale: 1.25;
     transform: rotate(180deg);

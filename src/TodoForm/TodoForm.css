@@ -1,0 +1,46 @@
+.form-textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    font-family:  'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.opciones .boton{
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.opciones .boton:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.boton.add{
+    background-color: #11cfff;
+    border: 2px solid #11cfff;
+}
+
+.boton.cancel{
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+}

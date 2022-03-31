@@ -35,6 +35,15 @@ function TodoProvider(props){
     saveTodos(newTodos);
     }
 
+    const addTodo = (text) => {
+        const newTodos = [...todos]
+        newTodos.push({
+            completed:false,
+            text: text
+        });
+        saveTodos(newTodos);
+        }
+
     useEffect( () => {
     console.log('Use effect llamado');
     }, [totalTodos]);
@@ -51,7 +60,8 @@ function TodoProvider(props){
             error : error,
             searchValue : searchValue,
             openModal,
-            setOpenModal
+            setOpenModal,
+            addTodo
         }}>
             {props.children}
         </TodoContext.Provider>

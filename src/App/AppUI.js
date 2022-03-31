@@ -6,6 +6,7 @@ import TodoSearch from '../TodoSearch';
 import { TodoContext } from '../TodoContext';
 import { useContext } from 'react'
 import Modal from '../Modal';
+import TodoForm from '../TodoForm';
 
 function AppUI() {
 
@@ -27,7 +28,7 @@ function AppUI() {
             </TodoList>
                 {value.openModal && (
                     <Modal>
-                    <p>Teletransportacionnn</p>
+                        <TodoForm/> 
                     </Modal>
                 )}
             
