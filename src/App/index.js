@@ -1,13 +1,13 @@
 import AppUI from './AppUI';
 import '../common.css';
-import { TodoContext } from '../TodoContext'
+import { TodoProvider } from '../TodoContext'
 
 function App() {
 
   return (
-    <TodoContext.Provider>
+    <TodoProvider>
       <AppUI />
-    </TodoContext.Provider>
+    </TodoProvider>
   );
 }
 

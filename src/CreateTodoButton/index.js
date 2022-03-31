@@ -1,8 +1,8 @@
 import './CreateTodoButton.css';
 
-function CreateTodoButton() {
+function CreateTodoButton(props) {
     const onClickHandle = () => {
-        console.log('Hiciste click en crear un nuevo ToDo');
+        props.setOpenModal(true);
     }
     return ( 
         <button onClick = {onClickHandle}>
