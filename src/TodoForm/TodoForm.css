@@ -1,8 +1,12 @@
+form{
+    width: 90%;
+    max-width: 600px;
+}
+
 .form-textarea{
     display: flex;
     flex-direction: column;
     width: 100%;
-    width: 500px;
     margin-bottom: 20px;
 }
 

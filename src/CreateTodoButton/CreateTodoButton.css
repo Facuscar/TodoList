@@ -5,12 +5,9 @@ button.openModal{
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    display: block;
     margin-right: 0;
     margin-left: auto;
     transition: scale 0.3s, transform 0.45s;
-    z-index: 5;
-    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
