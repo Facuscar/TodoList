@@ -7,6 +7,7 @@ import { TodoContext } from '../TodoContext';
 import { useContext } from 'react'
 import Modal from '../Modal';
 import TodoForm from '../TodoForm';
+import LoadingSkeleton from '../LoadingSkeleton';
 
 function AppUI() {
 
@@ -20,7 +21,7 @@ function AppUI() {
 
             <TodoList>
             {value.error && <p>Desespérate, hubo un error...</p>}
-            {value.loading && <p>Estamos cargando, no desesperes...</p>}
+            {value.loading && <LoadingSkeleton/>}
 
             {value.filteredTodos.map(todo => (
                 <TodoItem key={todo.text} text={todo.text} completed={todo.completed} onComplete={() => value.completeTodo(todo.text)} onDelete={() => value.deleteTodo(todo.text)} />

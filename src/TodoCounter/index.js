@@ -7,7 +7,7 @@ function TodoCounter() {
     const {completedTodos, totalTodos} = useContext(TodoContext)
 
     return ( 
-        <h2 className='TodoCounter'>{totalTodos > 0 ? `Has completado ${completedTodos} de ${totalTodos} tareas` : 'Aún no tienes ninguna tarea ¡Crea una!'}</h2>
+        <h2 className='TodoCounter'>{totalTodos > 0 ? `Has completado ${completedTodos} de ${totalTodos} tareas` : 'Aún no tienes ninguna tarea'}</h2>
      );
 }
 
