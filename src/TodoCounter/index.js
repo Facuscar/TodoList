@@ -6,8 +6,20 @@ function TodoCounter() {
 
     const {completedTodos, totalTodos} = useContext(TodoContext)
 
+    let title = '';
+
+    if(totalTodos>0){
+        if(totalTodos == completedTodos){
+            title = '¡Eso es todo! Ya puedes descansar'
+        } else{
+            title = `Has completado ${completedTodos} de ${totalTodos} tareas`
+        }
+    } else{
+        title = 'Aún no tienes ninguna tarea'
+    }
+
     return ( 
-        <h2 className='TodoCounter'>{totalTodos > 0 ? `Has completado ${completedTodos} de ${totalTodos} tareas` : 'Aún no tienes ninguna tarea'}</h2>
+        <h2 className='TodoCounter'>{title}</h2>
      );
 }
 
